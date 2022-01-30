@@ -1,0 +1,246 @@
+{% extends 'base.html' %} 
+{% block title %}Blogpost{% endblock title %}
+{% block blog %}active{% endblock blog %} 
+{% block style %}
+<style>
+
+#fixed-social {
+  position: fixed;
+  top: 130px;
+  z-index: 99;
+}
+
+#fixed-social a {
+  color: #fff;
+  display: block;
+  height: 40px;
+  position: relative;
+  text-align: center;
+   line-height: 40px;
+  width: 40px;
+  margin-bottom: 1px;
+  z-index: 2;
+}
+#fixed-social a:hover>span{
+ visibility: visible;
+ left: 41px;
+ opacity: 1;
+} 
+#fixed-social a span {
+ line-height: 40px;
+   left: 60px;
+   position: absolute;
+   text-align: center;
+   width: 120px;
+   visibility: hidden;
+   transition-duration: 0.5s;
+   z-index: 1;
+   opacity: 0;
+}
+.fixed-facebook{
+  background-color: #00AAE5;
+}
+.fixed-facebook span{
+ background-color: #00AAE5;
+}
+.fixed-twitter{
+ background-color: #7D3895;
+
+}
+.fixed-twitter span{
+  background-color: #7D3895;
+}
+.fixed-gplus{
+ background-color:  #ED2B29;
+
+}
+.fixed-gplus span{
+  background-color: #ED2B29;
+}
+.fixed-linkedin{
+ background-color: #FFC41E;
+
+}
+.fixed-linkedin span{
+  background-color: #FFC41E;
+}
+.fixed-instagrem{
+ background-color: #00AF54;
+
+}
+.fixed-instagrem span{
+  background-color: #00AF54;
+}
+
+</style>
+{% endblock style %}
+{% block body %}
+{% load humanize %}
+<div id="fixed-social">
+  <div>
+    <a href="#" class="fixed-facebook" target="_blank"><i class="fa fa-facebook"></i> <span>Facebook</span></a>
+  </div>
+  <div>
+    <a href="#" class="fixed-twitter" target="_blank"><i class="fa fa-twitter"></i> <span>Twitter</span></a>
+  </div>
+  <div>
+    <a href="#" class="fixed-gplus" target="_blank"><i class="fa fa-google"></i> <span>Google+</span></a>
+  </div>
+  <div>
+    <a href="#" class="fixed-linkedin" target="_blank"><i class="fa fa-linkedin"></i> <span>LinkedIn</span></a>
+  </div>
+  <div>
+    <a href="#" class="fixed-instagrem" target="_blank"><i class="fab fa-whatsapp"></i> <span>Whatsapp</span></a>
+  </div>
+</div>
+<div id="progress">
+  <span id="progress-value">
+      <i class="fas fa-arrow-up"></i>
+  </span>
+</div>
+<div class="postArea">
+<div class="blogpost">
+  {{posts.content | safe}}
+</div>
+
+<div class="relatedpost">
+   <h1>Related posts</h1>
+   {% for related in relatedpost %}
+   <div class="rPost">
+    <h3>{{related.title}}</h3>
+    <button><a href="/blogs/{{related.url}}">Read more</a></button>
+   </div>
+   {% endfor %}
+ </div>
+ <div class="follow">
+ <div class="rounded-social-buttons">
+   <h1>Follow us on</h1>
+  <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  <a class="social-button twitter" href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+  <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+  <a class="social-button youtube" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+  <a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+</div>
+
+
+
+
+<div  class="commentab">
+ <h1 class="commentTitle">Comments ({{comment.count | default:"0"}})</h1>
+<form action="/blogs/comments/" method="post">
+  {% csrf_token %}
+  <input type="text" class="comment" placeholder="Comment" name="comment">
+  <input type="hidden" name="Sno" value="{{posts.post_id}}">
+  <button type="submit" class="commentSubmit">Post</button>
+</form>
+<div class="commentsection">
+  {% for comments in comment reversed%}
+
+  <div class="commentBox">
+      <div class="commentHead">
+          <div>
+              <img src="\media\user.png" alt="user img">
+          </div>
+          <div class="userDetails">
+              <p>{{comments.user.username}}</p> 
+              <p>{{comments.timestamp | naturaltime}}</p>
+
+          </div>
+      </div>
+      <div>
+          {{comments.comments}}
+
+      </div>
+
+  </div> 
+  {% endfor %}
+</div>
+</div>
+
+<div class="relatedpostmob">
+  <h1>Related posts</h1>
+  {% for related in relatedpost %}
+  <div class="rPost">
+   <h3>{{related.title}}</h3>
+   <button><a href="/blogs/{{related.url}}">Read more</a></button>
+  </div>
+  {% endfor %}
+</div>
+{% endblock body %}
+{% block script %}
+<script>
+  let calcScrollValue = () => {
+    let scrollProgess = document.getElementById("progress");
+    let progressValue = document.getElementById("progress-value");
+
+    let pos = document.documentElement.scrollTop;
+    let calcHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    let scrollValue = Math.round((pos * 100) / calcHeight);
+
+    scrollProgess.style.background = `conic-gradient(#03CC65 ${scrollValue}%, #111 ${scrollValue}%)`;
+
+    if (pos > 100) {
+      scrollProgess.style.display = "grid";
+    } else {
+      scrollProgess.style.display = "none";
+    }
+    scrollProgess.addEventListener("click", () => {
+      document.documentElement.scrollTop = 0;
+    });
+  };
+  window.onscroll = calcScrollValue;
+  window.onload = calcScrollValue;
+
+
+  const fb = document.querySelector('.fixed-facebook');
+  const twitter = document.querySelector('.fixed-twitter');
+  const google = document.querySelector('.fixed-gplus');
+  const linkedin = document.querySelector('.fixed-linkedin');
+  const insta = document.querySelector('.fixed-instagrem');
+
+  function init(){
+    let postUrl = encodeURI(document.location.href);
+    let postTitle = encodeURI("{{posts.title}}");
+    fb.setAttribute('href',`https://www.facebook.com/sharer.php?u=${postUrl}
+` );
+    twitter.setAttribute('href',`
+https://twitter.com/share?url=${postUrl}&text=${postTitle}
+` );
+    google.setAttribute('href', `https://plus.google.com/share?url=${postUrl}
+` );
+    linkedin.setAttribute('href',`https://www.linkedin.com/shareArticle?url=${postUrl}&title=${postTitle}
+` );
+    insta.setAttribute('href', `https://wa.me/?text=${postTitle}  ${postUrl}`);
+  }
+  init()
+</script>
+{% endblock script %}
+
+{% block footer %}
+<footer>
+  <ul class="footer-links">
+    <li>
+      <i class="fas fa-home"></i>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <i class="fas fa-blog"></i>
+      <a href="/blogs">Blogs</a>
+    </li>
+    <li>
+      <i class="fas fa-id-card-alt"></i>
+      <a href="/contact">Contact us</a>
+    </li>
+    <li>
+      <i class="fas fa-fire"></i>
+      <a href="/more">More</a>
+    </li>
+ </ul>
+ <p class="text-center">Copyright &copy;  Fornbits 2022-2023</p>
+</footer>
+{% endblock footer %}
+

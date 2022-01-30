@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}What's new{% endblock title %}
+{% block more %}active{% endblock more %}
+{% block body %}
+<div class="policypages">
+    <img src="\media\Cloud hosting-amico.png" alt="">
+    <h1 class="updates">
+        What's new
+    </h1>
+    <p>{{updates.upload_time}}</p>
+    <br>
+    <div>
+    {{updates.update |safe}}
+    </div>
+</div>
+{% endblock body %}

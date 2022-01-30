@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}Join{% endblock title %}
+{% block profile %}active{% endblock profile %}
+{% block body %}
+<div class="nprofile">
+    {% if user.is_authenticated  %}
+    <div>
+        <img src="\media\Profile Interface-amico.png" alt="profile" class="profileimg">
+        <p >Username</p>
+        <p class="proDetail" > {{user.username | default:"undefined"}}</p>
+        <p >First name</p>
+        <p class="proDetail">{{user.first_name | default:"undefined"}}</p>
+        <p >Last name</p>
+        <p class="proDetail"> {{user.last_name| default:"undefined"}}</p>
+        <p >Email</p>
+        <p class="proDetail"> {{user.email | default:"undefined"}}</p>
+        <button><a href="/auth/login">Switch account</a></button>
+        <button><a href="/auth/logout">Log out</a></button>
+    </div>
+    {% else %}
+    <div>
+        <img src="\media\social-media-users.png" alt="image" class="loginimg">
+
+    </div>
+    <div>
+            <button><a href="/auth/login">Login</a></button>
+            <button><a href="/auth/signup">Register now</a></button>
+
+    </div>
+    {% endif %}
+</div>
+
+{% endblock body %}

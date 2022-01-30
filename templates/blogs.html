@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}Blogs{% endblock title %}
+{% block blog %}active{% endblock blog %}
+{% block body %}
+<div class="category">
+    <div>
+        <p><a href="/blogs">All posts</a></p>
+    </div>
+    {% for cat  in cats  %}
+    <div>
+        <img src="/media/{{cat.image}}" alt="">
+        <p><a href="/blogs/category/{{cat.url}}">{{cat.title}}</a></p>
+    </div>
+    {% endfor %}
+</div>
+<!-- <div class="postType">
+    <p><a href="">Long blogs</a></p>
+    <p><a href="">Short blogs </a></p>
+</div> -->
+<p class="blogPosts">Latest posts</p>
+<section class="posts">
+    {% for post in posts reversed %}
+<div class="content">
+    <div class="post">
+        <img src="\media\{{post.image}}" alt="post image">
+
+    </div>
+    <div class="post">
+        <p class="postime">{{post.upload_time}}</p>
+        <h1>{{post.title}}</h1>
+        <p class="postContent">{{post.description | truncatechars:500}}</p>
+        <button><a href="/blogs/{{post.url}}">Read more</a></button>
+    </div>
+</div>
+{% endfor %}
+</section>
+{% endblock body %}

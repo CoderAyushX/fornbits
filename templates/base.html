@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    {% block style %}{% endblock style %}
+    <title>{% block title %}{% endblock title %} | fornbits</title>
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <div class="navHead">
+        <h1><a class="navheadH1" href="/">Forn bits</a></h1>
+      </div>
+      <div class="navList" id="navlist">
+        <ul class="navItems" id="navItems">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blogs">Blog</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/auth" class="login">Profile</a></li>
+          <li><a href="/more" class="signup">More</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="navForMobile">
+      <ul>
+        <li class="list {% block home %}{% endblock home %}">
+          <a href="javascript:delay('/')"
+            ><span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+            <span class="text">Home</span>
+        </a>
+        </li>
+        <li class="list {% block blog %}{% endblock blog %}">
+          <a href="javascript:delay('/blogs')"
+            ><span class="icon"><ion-icon name="chatbubbles-outline"></ion-icon></span>
+            <span class="text">Blog</span>
+        </a>
+        </li>
+        <li class="list {% block contact %}{% endblock contact %}">
+          <a href="javascript:delay('/contact')"
+            ><span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+            <span class="text">Contact</span>
+        </a>
+        </li>
+        <li class="list {% block profile %}{% endblock profile %}">
+          <a href="javascript:delay('/auth')"
+            ><span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+            <span class="text">Profile</span>
+        </a>
+        </li>
+        <li class="list {% block more %}{% endblock more %}">
+          <a href="javascript:delay('/more')"
+            ><span class="icon"><ion-icon name="flame-outline"></ion-icon></span>
+            <span class="text">More</span>
+        </a>
+        </li>
+        <div class="indicator"></div>
+      </ul>
+    </div>
+
+   
+    {% block body %}{% endblock body %}
+    {% block footer %}{% endblock footer %}
+    {% block script %}
+    {% endblock script %}
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script src="{% static 'main.js' %}"></script>
+  </body>
+</html>
