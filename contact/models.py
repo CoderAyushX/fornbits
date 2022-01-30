@@ -5,7 +5,6 @@ from django.utils.timezone import now
 #contact model
 
 class Contacts(models.Model):
-    sno = models.AutoField(primary_key=True)
     firstName = models.CharField(max_length=150)
     lastName = models.CharField(max_length=150)
     email = models.EmailField(max_length=254)
