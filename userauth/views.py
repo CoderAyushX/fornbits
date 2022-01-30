@@ -1,4 +1,3 @@
-from tkinter import E
 from django.contrib import auth, messages
 from django.shortcuts import redirect, render, HttpResponse
 from django.contrib.auth.models import User
