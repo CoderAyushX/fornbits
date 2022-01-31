@@ -252,6 +252,9 @@ body{
   margin: 10px 0;
 
 }
+.posts{
+  margin: 20px;
+}
  .postType p{
   background-color: black;
   text-align: center;
@@ -748,6 +751,7 @@ footer a{
       width: 90vw;
     }
     .blogpost{
+      padding: 30px 10px 30px 30px;
       margin: 80px auto 0 auto;
     }
     
