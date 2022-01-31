@@ -893,7 +893,10 @@ footer a{
       height: 200px;
     }
     .nprofile{
-      margin: 30px 0 60px;
+      margin: 20px 0 40px;
+    }
+    .logedUser{
+      margin: 40px 0;
     }
     .nprofile .loginimg{
       width: 90vw;

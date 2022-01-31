@@ -4,7 +4,7 @@
 {% block body %}
 <div class="nprofile">
     {% if user.is_authenticated  %}
-    <div>
+    <div class="logedUser">
         <img src="https://i.postimg.cc/X7YXNdP1/Profile-Interface-amico.png" alt="profile" class="profileimg">
         <p >Username</p>
         <p class="proDetail" > {{user.username | default:"undefined"}}</p>
