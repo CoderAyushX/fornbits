@@ -4,7 +4,7 @@ from django.utils.timezone import now
 
 #contact model
 
-class Contacts(models.Model):
+class Contact(models.Model):
     firstName = models.CharField(max_length=150)
     lastName = models.CharField(max_length=150)
     email = models.EmailField(max_length=254)
