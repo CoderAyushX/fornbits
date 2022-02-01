@@ -10,7 +10,7 @@ class Category(models.Model):
     title = models.CharField( max_length=150)
     description = models.TextField()
     url = models.CharField( max_length=150)
-    image = models.ImageField( upload_to='category/')
+    image = models.URLField(max_length=350)
     timestamp = models.DateTimeField( auto_now_add=True , null=True)
 
     def __str__(self):
@@ -26,7 +26,7 @@ class Post(models.Model):
     url = models.CharField( max_length=150)
     cType = models.CharField(max_length=50)
     cat = models.ForeignKey(Category, on_delete=models.CASCADE)
-    image = models.ImageField( upload_to='post/')
+    image = models.URLField(max_length=350)
     upload_time = models.DateTimeField(default= now)
 
     def __str__(self):
