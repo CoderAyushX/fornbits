@@ -736,6 +736,9 @@ footer a{
       padding: 5px;
       height: 55px;
     }
+    .home{
+      height: 80vh;
+    }
    
     .home-content img{
       width: 70vw;

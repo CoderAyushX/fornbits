@@ -8,7 +8,7 @@
     </div>
     {% for cat  in cats  %}
     <div>
-        <img src="/media/{{cat.image}}" alt="">
+        <img src="{{cat.image}}" alt="cat">
         <p><a href="/blogs/category/{{cat.url}}">{{cat.title}}</a></p>
     </div>
     {% endfor %}
