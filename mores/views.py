@@ -51,3 +51,6 @@ def update(request):
     updates = whatsnew.objects.all().first()
     print(updates)
     return render(request, 'updates.html', {'updates' : updates})
+
+def error_404(request, exception):
+    return render(request, '404.html')
