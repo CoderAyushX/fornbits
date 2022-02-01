@@ -790,8 +790,8 @@ footer a{
     .navForMobile ul li{
       position: relative;
       list-style: none;
-      width: 60px;
-      height: 60px;
+      width: 70px;
+      height: 70px;
       z-index: 1;
       cursor: pointer;
     }
@@ -835,8 +835,8 @@ footer a{
     .indicator{
       position: absolute;
       top: -50%;
-      width: 60px;
-      height: 60px;
+      width: 70px;
+      height: 70px;
       background-color: #29fd53;
       border-radius: 50%;
       border: 6px solid  transparent;
@@ -865,19 +865,19 @@ footer a{
       box-shadow:  -1px -10px 0 0  black;
     } */
     .navForMobile ul li:nth-child(1).active ~ .indicator{
-      transform: translateX(calc(60px*0));
+      transform: translateX(calc(70px*0));
     }
     .navForMobile ul li:nth-child(2).active ~ .indicator{
-      transform: translateX(calc(60px*1));
+      transform: translateX(calc(70px*1));
     }
     .navForMobile ul li:nth-child(3).active ~ .indicator{
-      transform: translateX(calc(60px*2));
+      transform: translateX(calc(70px*2));
     }
     .navForMobile ul li:nth-child(4).active ~ .indicator{
-      transform: translateX(calc(60px*3));
+      transform: translateX(calc(70px*3));
     }
     .navForMobile ul li:nth-child(5).active ~ .indicator{
-      transform: translateX(calc(60px*4));
+      transform: translateX(calc(70px*4));
     }
     .contact img{
       width: 80vw ;
