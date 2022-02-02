@@ -469,7 +469,8 @@ body{
   align-items: center;
 }
 .policypage h1{
-  font-size: 80px
+  font-size: 80px;
+  line-height: 28px;
 }
 .policypage button{
   background-color: #29fd53;
