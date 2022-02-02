@@ -452,7 +452,7 @@ body{
   padding: 10px 30px 30px 30px;
   color: var(--pText);
   letter-spacing: 1px;
-  line-height: 24px; 
+  line-height: 28px; 
 }
 .policypages img{
   width: 25vw;
@@ -470,7 +470,6 @@ body{
 }
 .policypage h1{
   font-size: 80px;
-  line-height: 28px;
 }
 .policypage button{
   background-color: #29fd53;
@@ -916,7 +915,6 @@ footer a{
     }
     .policypage h1{
       font-size: 50px;
-      line-height: 28px;
     }
     .commentab{
       margin: 40px 0 10px;
