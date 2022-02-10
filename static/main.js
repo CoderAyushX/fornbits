@@ -16,6 +16,6 @@ function delay (URL) {
 }
 window.addEventListener("load", function() {
   document.getElementById("loader").style.display = "none";
-  document.getElementById("body").style.display = "";
+  document.getElementById("body").style.display = "block";
 });
 
