@@ -719,8 +719,8 @@ footer a{
 }
 
 #loader {
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
   border: 20px solid #b2b2b2;
   border-top-color:#03CC65 ;
   border-radius: 50%;
