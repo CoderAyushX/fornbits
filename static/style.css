@@ -284,7 +284,7 @@ body{
 }
 .contact{
   display: flex;
-  margin: 90px 20px;
+  margin: 80px 20px;
   width: 90vw;
   justify-content: center;
   align-items: center;
