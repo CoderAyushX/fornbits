@@ -31,6 +31,9 @@ body{
 #body{
   display: none;
 }
+#footer{
+  display: none;
+}
 .navbar li, .navbar a{
     list-style: none;
     display: inline-block;
@@ -716,8 +719,8 @@ footer a{
 #loader {
   height: 150px;
   width: 150px;
-  border: 20px solid #c5c5c5;
-  border-top-color: #e92e3d;
+  border: 20px solid #b2b2b2;
+  border-top-color:#03CC65 ;
   border-radius: 50%;
   position: absolute;
   margin: auto;
