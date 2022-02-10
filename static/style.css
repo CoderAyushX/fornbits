@@ -29,9 +29,11 @@ body{
   background: var(--bg);
 }
 #body{
-  display: none;
+  transition: 0.5s;
+  opacity: 0;
 }
 #footer{
+  transition: 0.5s;
   display: none;
 }
 .navbar li, .navbar a{
