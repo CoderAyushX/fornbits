@@ -12,6 +12,6 @@ function activeLink() {
 list.forEach((item)=> item.addEventListener( 'click', activeLink ))
 
 function delay (URL) {
-  setTimeout( function() { window.location = URL }, 200 );
+  setTimeout( function() { window.location = URL }, 100 );
 }
 
