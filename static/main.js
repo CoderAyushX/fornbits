@@ -14,4 +14,7 @@ list.forEach((item)=> item.addEventListener( 'click', activeLink ))
 function delay (URL) {
   setTimeout( function() { window.location = URL }, 100 );
 }
+window.addEventListener("load", function() {
+  document.getElementById("loader").style.display = "none";
+});
 
