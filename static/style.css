@@ -941,10 +941,10 @@ footer a{
       height: 200px;
     }
     .nprofile{
-      margin: 60px 0 90px;
+      margin: 60px 0 80px;
     }
     .nprofile .loginimg{
-      width: 65vw;
+      width: 75vw;
     }
     .nprofile .profileimg{
       width: 60vw;
@@ -977,7 +977,7 @@ footer a{
       padding: 30px 0 120px;
     }
     .more{
-      padding: 25px 25px;
+      padding: 15px 25px;
     }
     .more img{
       width: 65vw;
