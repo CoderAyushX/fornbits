@@ -524,7 +524,6 @@ footer a{
 .more{
   margin: 55px 0 0;
   padding: 25px 40vw 25px 40px;
-  height: 100vh;
   color: var(--pText);
   font-family: 'Poppins', sans-serif;
   background-color: var(--dark);
