@@ -92,3 +92,22 @@ input:checked + .slider:before {
 
 </div>
 {% endblock body %}
+<script>
+    document.querySelector("#ThemeCheckbox").addEventListener("click",  theme);
+function theme(){
+    alert("coming soon.......")
+  theme = document.getElementById("ThemeCheckbox").checked;
+  // Set Item
+  localStorage.setItem("theme", theme);
+// Retrieve
+}
+window.onload = function themeIs(){
+// Retrieve
+console.log(localStorage.getItem("theme"))
+if (localStorage.getItem("theme") == false || localStorage.getItem("theme") == "false"){
+    document.getElementById("ThemeCheckbox").checked = false;
+}else if(localStorage.getItem("theme") == true || localStorage.getItem("theme") == "true"){
+    document.getElementById("ThemeCheckbox").checked = true;
+}
+}
+</script>
