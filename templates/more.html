@@ -92,10 +92,11 @@ input:checked + .slider:before {
 
 </div>
 {% endblock body %}
+
+{% block script %}
 <script>
     document.querySelector("#ThemeCheckbox").addEventListener("click",  theme);
 function theme(){
-    alert("coming soon.......")
   theme = document.getElementById("ThemeCheckbox").checked;
   // Set Item
   localStorage.setItem("theme", theme);
@@ -111,3 +112,4 @@ if (localStorage.getItem("theme") == false || localStorage.getItem("theme") == "
 }
 }
 </script>
+{% endblock script %}
