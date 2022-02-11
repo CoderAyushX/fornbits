@@ -13,9 +13,6 @@ list.forEach((item)=> item.addEventListener( 'click', activeLink ))
 
 function delay (URL) {
   setTimeout( function() { window.location = URL }, 100 );
-  document.getElementById("loader").style.display = "block";
-  document.getElementById("body").style.opacity = "0";
-  document.getElementById("footer").style.display = "none";
 }
 window.addEventListener("load", function() {
   document.getElementById("loader").style.display = "none";
