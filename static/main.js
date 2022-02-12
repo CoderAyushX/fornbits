@@ -25,7 +25,6 @@ if (localStorage.getItem("theme") == false || localStorage.getItem("theme") == "
   r.style.setProperty('--bg', '#F5F5F5');
   r.style.setProperty('--dark', 'white');
   r.style.setProperty('--pText', 'black');
-  r.style.setProperty('--catType', 'black');
   r.style.setProperty('--subject', '#1C6DD0' )
 }else if(localStorage.getItem("theme") == true || localStorage.getItem("theme") == "true"){
   
