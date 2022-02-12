@@ -12,16 +12,20 @@ def blogs(request):
     return render(request, 'blogs.html', context)
 
 def blogpost(request, url):
-    post =  Post.objects.get(url=url)
-    relatedPost = Post.objects.all().exclude(post_id= post.post_id)[:5]
+    try:
+      post =  Post.objects.get(url=url)
+      relatedPost = Post.objects.all().exclude(post_id= post.post_id)[:5]
     #work to do here
-    comments = blogpostComment.objects.filter(post = post)
-    context = {
+      comments = blogpostComment.objects.filter (post = post)
+      context = {
         'posts':post,
         'comment': comments,
         'relatedpost': relatedPost
-    }
-    return render(request, 'blogpost.html', context)
+      }
+      return render(request, 'blogpost.html', context)
+    except:
+        return render(request, '500.html', context)
+
 
 def category(request, url):
     searchCat = Category.objects.get(url = url)
