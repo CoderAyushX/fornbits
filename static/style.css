@@ -748,6 +748,9 @@ footer a{
   -webkit-animation: load 1.5s infinite;
   animation: load 1.5s infinite;
 }
+.rate-us{
+  background: var(--dark);
+}
 
 @-webkit-keyframes load {
   100% {
