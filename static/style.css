@@ -63,7 +63,6 @@ body{
     font-family: 'Lobster', cursive;
     font-size: 30px;
     color: var(--subject);
-    text-shadow: 3px 4px 7px rgba(81,67,21,0.8);
 }
 .navbar div h1::first-letter{
     text-transform: capitalize;
