@@ -13,6 +13,7 @@
   --subject: #EEB76B;
   --subject2: #E2703A;
   --s3Text: #DBCBBD;
+  --green: #03CC65;
 }
 *{
     padding: 0;
@@ -843,7 +844,7 @@ footer a{
       flex-direction: column;
       width: 100%;
       text-align: center;
-      color: var(--hText);
+      color: var(--green);
     }
     .navForMobile ul li a .icon{
       position: relative;
@@ -865,7 +866,7 @@ footer a{
       letter-spacing: .05em;
       transition: .5s;
       opacity: 0;
-      color: var(--subject2);
+      color: var(--pText);
 
     }
     .navForMobile ul li.active a .text{
