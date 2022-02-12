@@ -534,7 +534,7 @@ footer a{
   background: var(--dark);
 }
 .more{
-  margin: 55px 0 0px;
+  margin: 55px 0 20px;
   padding: 25px 40vw 25px 40px;
   color: var(--pText);
   font-family: 'Poppins', sans-serif;
