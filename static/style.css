@@ -532,11 +532,12 @@ footer a{
   background: var(--dark);
 }
 .more{
-  margin: 55px 0 95px;
+  margin: 55px 0 0px;
   padding: 25px 40vw 25px 40px;
   color: var(--pText);
   font-family: 'Poppins', sans-serif;
   background-color: var(--dark);
+  height: 90vh;
 }
 .more h1{
   border-bottom: 4px solid var(--pText);
