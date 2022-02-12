@@ -100,6 +100,7 @@ function theme(){
   theme = document.getElementById("ThemeCheckbox").checked;
   // Set Item
   localStorage.setItem("theme", theme);
+  window.location.reload();
 
 // Retrieve
 if (localStorage.getItem("theme") == false || localStorage.getItem("theme") == "false"){
