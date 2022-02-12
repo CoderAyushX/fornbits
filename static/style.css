@@ -433,9 +433,11 @@ body{
 .nprofile .loginimg{
   width: 30vw;
 }
+.nprofile button a{
+  color: var(--dark);
+}
 .nprofile button{
   background-color: var(--blue);
-  color: var(--dark);
   border: none;
   width: 150px;
   font-family: 'Poppins', sans-serif;
