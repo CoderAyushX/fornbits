@@ -22,7 +22,7 @@ window.addEventListener("load", function() {
 var r = document.querySelector(':root');
 if (localStorage.getItem("theme") == false || localStorage.getItem("theme") == "false"){
   console.log(1)
-  r.style.setProperty('--bg', '#FDEFF4');
+  r.style.setProperty('--bg', '#F5F5F5');
   r.style.setProperty('--dark', 'white');
   r.style.setProperty('--pText', 'black');
   r.style.setProperty('--subject', '#1C6DD0' )
