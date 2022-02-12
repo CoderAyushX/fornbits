@@ -452,7 +452,8 @@ body{
 }
 .proDetail{
   padding: 10px;
-  background: #000;
+  background: var(--dark);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   border-radius: 10px;
   color: var(--sText);
 }
@@ -527,6 +528,9 @@ footer a{
   margin-top: 20px;
 }
 /*more*/
+.moreBody{
+  background: var(--dark);
+}
 .more{
   margin: 55px 0 95px;
   padding: 25px 40vw 25px 40px;

@@ -22,7 +22,7 @@ window.addEventListener("load", function() {
 var r = document.querySelector(':root');
 if (localStorage.getItem("theme") == false || localStorage.getItem("theme") == "false"){
   console.log(1)
-  r.style.setProperty('--bg', '#D2D2D2');
+  r.style.setProperty('--bg', '#DDDDDD');
   r.style.setProperty('--dark', 'white');
   r.style.setProperty('--pText', 'black');
 }else if(localStorage.getItem("theme") == true || localStorage.getItem("theme") == "true"){
