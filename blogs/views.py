@@ -27,7 +27,7 @@ def blogpost(request, url):
         }
         return render(request, 'blogpost.html', context)
     except:
-        return render(request, '500.html', context)
+        return render(request, '500.html')
 
 
 def category(request, url):
