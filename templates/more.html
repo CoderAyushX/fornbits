@@ -97,15 +97,18 @@ input:checked + .slider:before {
 <script>
     document.querySelector("#ThemeCheckbox").addEventListener("click",  theme);
 function theme(){
-    alert("Coming soon.......!");
   theme = document.getElementById("ThemeCheckbox").checked;
   // Set Item
   localStorage.setItem("theme", theme);
+
 // Retrieve
+if (localStorage.getItem("theme") == false || localStorage.getItem("theme") == "false"){
+  document.getElementById("ThemeCheckbox").checked = false;
+}else if(localStorage.getItem("theme") == true || localStorage.getItem("theme") == "true"){
+  document.getElementById("ThemeCheckbox").checked = true;
+}
 }
 window.onload = function themeIs(){
-// Retrieve
-console.log(localStorage.getItem("theme"))
 if (localStorage.getItem("theme") == false || localStorage.getItem("theme") == "false"){
     document.getElementById("ThemeCheckbox").checked = false;
 }else if(localStorage.getItem("theme") == true || localStorage.getItem("theme") == "true"){
