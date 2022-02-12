@@ -866,7 +866,7 @@ footer a{
       letter-spacing: .05em;
       transition: .5s;
       opacity: 0;
-      color: var(--pText);
+      color: var(--subject2);
 
     }
     .navForMobile ul li.active a .text{
