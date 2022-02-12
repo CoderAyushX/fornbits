@@ -18,6 +18,7 @@
   --blue: #4f47e4;
   --cat: #000;
   --contactp: #fff;
+  --catType: #fff;
 }
 *{
     padding: 0;
@@ -167,7 +168,7 @@ body{
   word-wrap: break-word;
 }
 .category p > a{
-  color: var(--pText);
+  color: var(--catType);
 }
 .category img{
   width: 30px;
@@ -317,7 +318,7 @@ body{
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   border:2px;
   margin:10px 10px 10px 0;
-  background: #000;
+  background: var(--dark);
   color: #fff;
   border-radius: 50px;
   width: 300px;
@@ -332,6 +333,7 @@ body{
 }
 .contactButton{
   background-color: var(--blue);
+  color: var(--dark);
   border: none;
   width: 60px;
   font-family: 'Poppins', sans-serif;
@@ -434,6 +436,7 @@ body{
 }
 .nprofile button{
   background-color: var(--blue);
+  color: var(--dark);
   border: none;
   width: 150px;
   font-family: 'Poppins', sans-serif;
