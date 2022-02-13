@@ -26,6 +26,7 @@ if (localStorage.getItem("theme") == false || localStorage.getItem("theme") == "
   r.style.setProperty('--dark', 'white');
   r.style.setProperty('--pText', 'black');
   r.style.setProperty('--subject', '#1C6DD0' )
+  // document.getElementById("blogpost").style.boxShadow = "10px 20px 30px blue";
 }else if(localStorage.getItem("theme") == true || localStorage.getItem("theme") == "true"){
   
 }

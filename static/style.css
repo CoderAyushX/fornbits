@@ -197,7 +197,7 @@ body{
   overflow: hidden;
   width: 85vw;
   margin: 20px 0px 80px 20px;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   font-family: 'Poppins', sans-serif;
   background: var(--dark);
   color: var(--pText);
@@ -249,7 +249,6 @@ body{
   border-radius: 15px;
   padding: 30px;
   color: var(--pText);
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 .blogpost p, .blogpost li {
   letter-spacing: 1px;
