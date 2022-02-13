@@ -802,11 +802,11 @@ footer a{
   animation: load 1.5s infinite;
 }
 .rate-us{
-  background: var(--bg);
+  background: var(--dark);
 }
   
 .feedbackDiv{
-  background: var(--bg);
+  background: var(--dark);
 }
 
 @-webkit-keyframes load {
