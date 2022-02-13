@@ -82,7 +82,7 @@ body{
     margin-left: 4px;
 }
 .login ,.signup{
-    color: var(--pText);
+    color: #fff;
 }
 .navbar{
     display: flex;
