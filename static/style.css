@@ -639,7 +639,34 @@ footer a{
   margin: 20px auto;
   display: none;
 }
+.TagPost{
+  background-color: var(--dark);
+  color: var(--pText);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  width: 80vw;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+.Tags{
+  background-color: var(--bg);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 5px 0;
+  display: flex;
+  flex-wrap: wrap;
 
+}
+.Tags p{
+  background-color: var(--dark);
+  color: var(--pText);
+  padding: 2px;
+  border: 1px;
+  border-radius: 10px;
+  margin: 5px;
+}
 .svg-inline--fa {
   vertical-align: -0.200em;
 }
