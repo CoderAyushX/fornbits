@@ -534,14 +534,15 @@ footer a{
 /*more*/
 .moreBody{
   background: var(--dark);
+  height: 100vh;
 }
 .more{
   margin: 55px 0 0px;
-  padding: 25px 40vw 25px 40px;
+  padding: 25px 40vw 35px 40px;
   color: var(--pText);
   font-family: 'Poppins', sans-serif;
   background-color: var(--dark);
-  height: 95vh;
+
 }
 .more h1{
   border-bottom: 4px solid var(--pText);
@@ -665,7 +666,7 @@ footer a{
   padding: 4px 10px 4px 10px;
   border: 1px;
   border-radius: 10px;
-  margin: 5px;
+  margin: 4px;
   font-family: 'Poppins', sans-serif;
 }
 .svg-inline--fa {
