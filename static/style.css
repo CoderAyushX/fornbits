@@ -80,6 +80,7 @@ body{
     background: var(--blue);
     padding: 8px;
     margin-left: 4px;
+    color: #fff;
 }
 .login ,.signup{
     color: var(--pText);
