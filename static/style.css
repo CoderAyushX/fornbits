@@ -639,7 +639,7 @@ footer a{
   margin: 20px auto;
   display: none;
 }
-.TagPost{
+.TagBox{
   background-color: var(--dark);
   color: var(--pText);
   display: flex;
@@ -662,10 +662,12 @@ footer a{
 .Tags p{
   background-color: var(--dark);
   color: var(--pText);
-  padding: 2px;
+  padding: 4px 6px 4px 6px;
   border: 1px;
   border-radius: 10px;
   margin: 5px;
+  font-size: 22px;
+  font-family: 'Poppins', sans-serif;
 }
 .svg-inline--fa {
   vertical-align: -0.200em;
