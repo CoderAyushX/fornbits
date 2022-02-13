@@ -23,6 +23,7 @@
 </div> -->
 <p class="blogPosts">Latest posts</p>
 <section class="posts">
+    {% if posts.count > 0 %}
     {% for post in posts reversed %}
 <div class="content" id="content">
     <div class="post">
@@ -37,5 +38,31 @@
     </div>
 </div>
 {% endfor %}
+{% else %}
+<p> no post</p>
+<p> no post</p>
+<p> no post</p>
+<p> no post</p>
+<p> no post</p>
+<p> no post</p>
+<p> no post</p>
+<p> no post</p>
+<p> no post</p>
+<p> no post</p>
+<p> no post</p>
+<p> no post</p>
+<p> no post</p>
+<p> no post</p>
+<p> no post</p>
+<p> no post</p>
+<p> no post</p>
+<p> no post</p>
+<p> no post</p>
+<p> no post</p>
+<p> no post</p>
+
+
+{% endif %}
+
 </section>
 {% endblock body %}
