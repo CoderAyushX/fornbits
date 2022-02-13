@@ -805,7 +805,7 @@ footer a{
 }
   
 #contact{
-  background: var(--dark);
+  background: var(--bg);
 }
 
 @-webkit-keyframes load {
