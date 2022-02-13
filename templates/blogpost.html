@@ -176,12 +176,9 @@
 <div class="TagBox">
   <h1>Tags</h1>
   <div class="Tags">
-   <p>tags</p>
-   <p>tags</p>
-   <p>tags</p>
-   <p>tags</p>
-   <p>tags</p>
-
+    {% for tag in tags %}
+   <p>{{tag}}</p>
+   {% endfor %}
 
   </div>
 </div>

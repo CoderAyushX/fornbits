@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.test import tag
 from .models import Category, Post, blogpostComment
 
 # Create your views here.
@@ -20,10 +21,22 @@ def blogpost(request, url):
         relatedPost = Post.objects.all().exclude(post_id=post.post_id)[:5]
         # work to do here
         comments = blogpostComment.objects.filter(post=post)
+        def spaceRemove(text):
+            TEXT = text.replace(" ", "")
+            return TEXT
+        tags = post.tags
+        splitedText = tags.split(",")
+        hastags = []
+        for j in splitedText:
+            hastags.append(spaceRemove(j))
+
+        final = map(lambda x: f"#{x}", hastags)
+        finalTags = list(final)
         context = {
             'posts': post,
             'comment': comments,
-            'relatedpost': relatedPost
+            'relatedpost': relatedPost,
+            'tags': finalTags
         }
         return render(request, 'blogpost.html', context)
     except:
