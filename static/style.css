@@ -536,12 +536,12 @@ footer a{
   background: var(--dark);
 }
 .more{
-  margin: 55px 0 20px;
+  margin: 55px 0 0px;
   padding: 25px 40vw 25px 40px;
   color: var(--pText);
   font-family: 'Poppins', sans-serif;
   background-color: var(--dark);
-  height: 90vh;
+  height: 95vh;
 }
 .more h1{
   border-bottom: 4px solid var(--pText);
@@ -653,7 +653,7 @@ footer a{
 .Tags{
   background-color: var(--bg);
   border-radius: 10px;
-  padding: 20px;
+  padding: 8px;
   margin: 5px 0;
   display: flex;
   flex-wrap: wrap;
