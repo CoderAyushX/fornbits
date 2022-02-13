@@ -197,6 +197,7 @@ body{
   overflow: hidden;
   width: 85vw;
   margin: 20px 0px 80px 20px;
+  box-shadow: none;
   font-family: 'Poppins', sans-serif;
   background: var(--dark);
   color: var(--pText);
