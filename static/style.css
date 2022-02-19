@@ -98,8 +98,9 @@ body{
 .navHead{
   display: flex;
   flex-wrap: nowrap;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
+  height: 55px;
 }
 .headIMG{
   height: 40px;
