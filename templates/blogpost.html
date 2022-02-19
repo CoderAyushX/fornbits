@@ -103,8 +103,11 @@
   </span>
 </div>
 <div class="postArea">
+  <div class="postPath">
+    <p>Home > Blog > {{posts.title}}</p>
+  </div>
 <div class="blogpost" id="blogpost">
-  <p class="postPath">Home > Blog > {{posts.title}}</p>
+
   {{posts.content | safe}}
 </div>
 

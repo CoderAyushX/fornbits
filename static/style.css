@@ -231,10 +231,15 @@ body{
   flex-direction: row-reverse;
 }
 .postPath{
-  color: var(--green2);
-  font-size: 14px;
-  word-wrap: break-word;
-  margin-bottom: 15px;
+  font-family: 'Roboto', sans-serif;
+  width: 55vw;
+  word-spacing: 4px;
+  letter-spacing: .5px;
+  margin: 85px 0 0 10vw;
+  background: var(--dark);
+  border-radius: 15px;
+  padding: 30px;
+  color: var(--pText);
   
 }
 .content{
@@ -290,7 +295,7 @@ body{
   width: 55vw;
   word-spacing: 4px;
   letter-spacing: .5px;
-  margin: 85px 0 0 10vw;
+  margin: 15px 0 0 10vw;
   background: var(--dark);
   border-radius: 15px;
   padding: 30px;
@@ -893,6 +898,10 @@ footer a{
       width: 95vw;
     }
     .blogpost{
+      padding: 10px 6px 30px 38px;
+      margin: 10px auto 0 auto;
+    }
+    .postPath{
       padding: 10px 6px 30px 38px;
       margin: 80px auto 0 auto;
     }
