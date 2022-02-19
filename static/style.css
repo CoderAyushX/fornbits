@@ -178,11 +178,13 @@ body{
   border: 1px;
   padding: 5px 15px;
   margin-left: 20px;
-  margin-right: 5px;
   border-radius: 10px;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   background: var(--cat);
   word-wrap: break-word;
+}
+.category div:last-child{
+  margin-right: 5px;
 }
 .category p > a{
   color: var(--catType);
