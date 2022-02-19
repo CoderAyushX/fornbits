@@ -97,7 +97,7 @@ body{
 }
 .navbar .navHead{
   display: flex;
-  width: 200px;
+  width: 170px;
   align-items: center;
   justify-content: center;
   height: 55px;
@@ -868,15 +868,8 @@ footer a{
   }
     .navItems{
       display: none;
-
-
     }
 
-    .navItems li{
-      display: block;
-      margin:  30px 0;
-     
-    }
     .navbar{
       justify-content: flex-start;
       padding: 5px;
