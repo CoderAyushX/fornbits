@@ -95,22 +95,21 @@ body{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px;
 
 }
-.navHead{
+.navbar .navHead{
   display: flex;
-  width: 100%;
+  width: 200px;
   align-items: center;
   justify-content: center;
   height: 55px;
 }
-.headIMG{
+.navbar .navHead .headIMG{
   height: 40px;
 }
-.headImg{
+.navbar .navHead  .headIMG .headImg{
   width: 100%;
   height: 100%;
   object-fit: contain;
   margin-right: 5px;
-
 }
   /* home image */
 .home{
