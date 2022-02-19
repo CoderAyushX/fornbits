@@ -901,6 +901,12 @@ footer a{
     .blogCat{
       margin-top: 65px;
     }
+    .category{
+      margin-top: 60px;
+    }
+    .blogPosts{
+      margin-top: 5px;
+    }
     .navForMobile{
       display: block ;
       z-index: 99;
