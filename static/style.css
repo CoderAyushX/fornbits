@@ -98,7 +98,7 @@ body{
 .navbar .navHead{
   display: flex;
   width: 170px;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   height: 55px;
 }
