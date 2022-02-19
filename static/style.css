@@ -102,7 +102,7 @@ body{
   justify-content: center;
 }
 .headIMG{
-  height: 42px;
+  height: 40px;
 }
 .headImg{
   width: 100%;
@@ -1022,7 +1022,7 @@ footer a{
       transform: translateX(calc(70px*4));
     } */
     .contact img{
-      width: 80vw ;
+      width: 65vw ;
     }
     .contact form{
       justify-content: center;
