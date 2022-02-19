@@ -879,6 +879,7 @@ footer a{
      
     }
     .navbar{
+      justify-content: flex-start;
       padding: 5px;
       height: 55px;
     }
