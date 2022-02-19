@@ -294,7 +294,7 @@ body{
 .blogpost{
   font-family: 'Roboto', sans-serif;
   width: 55vw;
-  word-spacing: 4px;
+  word-spacing: 5px;
   letter-spacing: .5px;
   margin: 15px 0 0 10vw;
   background: var(--dark);
