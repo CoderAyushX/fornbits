@@ -100,7 +100,7 @@ body{
   justify-content: center;
 }
 .headIMG{
-  height: 55px;
+  height: 45px;
 }
 .headImg{
   width: 100%;
@@ -863,7 +863,6 @@ footer a{
     .navbar{
       padding: 5px;
       height: 55px;
-      justify-content: center;
     }
     .home{
       height: 85vh;
