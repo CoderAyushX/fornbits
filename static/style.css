@@ -237,7 +237,7 @@ body{
   letter-spacing: .5px;
   margin: 85px 0 0 10vw;
   background: var(--dark);
-  border-radius: 15px;
+  border-radius: 8px;
   padding: 30px;
   color: var(--green);
   
