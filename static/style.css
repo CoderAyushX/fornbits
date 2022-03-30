@@ -912,11 +912,14 @@ footer a{
     .posts .content:nth-child(odd){
       flex-direction: column;
     }
-    .blogpost, .policypages{
+   .policypages{
       width: 95vw;
     }
     .blogpost{
-      padding: 10px 6px 30px 38px;
+      width: 98vw;
+    }
+    .blogpost{
+      padding: 15px 4px 30px 36px;
       margin: 10px auto 0 auto;
     }
     .postPath{
@@ -1122,7 +1125,7 @@ footer a{
     #progress {
       height: 60px;
       width: 60px;
-      bottom: 40px;
+      bottom: 20px;
     }
     #progress-value {
       font-size: 20px;
