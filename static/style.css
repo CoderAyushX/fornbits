@@ -21,6 +21,8 @@
   --cat: #000;
   --contactp: #fff;
   --catType: #fff;
+  --path: #A6FFF2;
+
 }
 *{
     padding: 0;
@@ -29,7 +31,6 @@
     text-decoration: none;
 }
 a{
-    color: black;
     text-decoration: none;
 }
 html{
@@ -113,6 +114,9 @@ body{
   border-radius: 10px;
   background: var(--green2);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.home-content button a {
+  color: black;
 }
 .home-content{
   text-align: center;
@@ -226,7 +230,7 @@ body{
   background: var(--dark);
   border-radius: 8px;
   padding: 15px;
-  color: var(--green);
+  color: var(--path);
   
 }
 .content{
@@ -287,6 +291,25 @@ body{
   border-radius: 15px;
   padding: 30px;
   color: var(--pText);
+}
+.blogpost > h1{
+  color: #3EC1D3;
+}
+.blogpost > h2{
+  color: #3EC1D3;
+}.blogpost > h3{
+  color: #3EC1D3;
+}.blogpost > h4{
+  color: #3EC1D3;
+}.blogpost > h5{
+  color: #3EC1D3;
+}
+.blogpost > h6{
+  color: #3EC1D3;
+}
+.blogpost a{
+  color: #00E0FF;
+text-decoration:underline;
 }
 .blogpost p, .blogpost li {
   letter-spacing: 1px;
@@ -665,6 +688,9 @@ footer a{
   background: var(--subject2);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   margin: 8px 0 0;
+}
+.rPost button a{
+  color: var(--pText);
 }
 .relatedpostmob{
   background-color: var(--dark);
@@ -1073,7 +1099,7 @@ footer a{
       margin: 8px;
     }
     footer{
-      padding: 30px 0 120px;
+      padding: 30px 0 30px;
     }
     .more{
       padding: 0px 25px;
@@ -1084,7 +1110,7 @@ footer a{
     #progress {
       height: 60px;
       width: 60px;
-      bottom: 80px;
+      bottom: 40px;
     }
     #progress-value {
       font-size: 20px;
