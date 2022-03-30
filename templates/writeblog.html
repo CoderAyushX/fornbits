@@ -30,14 +30,7 @@
     margin: 69px auto  20px auto;
     text-align: center;
 }
-html,body{
-    height:100%;
-  }
-.wrapper {
-      min-height: 100%;
-      position: relative;
-    padding-bottom: 70px; /* footer's height */
-}
+
 body{
 background:#181818;
 }
@@ -59,8 +52,11 @@ button{
   color: black;
   background: cyan;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  margin: 8px 0 120px;
+  margin: 8px 0 20px;
 }
+.navForMobile{
+    display: none;
+  }
 </style>
 {% endblock style %}
 
@@ -69,14 +65,12 @@ button{
 
 
  {% block body %}
- <div class="wrapper">
  <h1 class="writeblog">Write a blog for forbits</h1>
     <form method="post">
         {% csrf_token %}
       <textarea id="mytextarea"  name="content">Hello, World!</textarea>
       <button type="submit">Submit</button>
     </form>
-</div>
  {% endblock body %}
 {% block script %}
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
