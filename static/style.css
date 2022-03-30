@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Poppins:wght@400;500;600;700&family=Roboto+Condensed:wght@400;700&family=Ubuntu:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 :root{
   --bg :#181818;
@@ -63,9 +63,15 @@ body{
 }
 
 .navbar div .navheadH1{
-  font-family: 'Paytone One', sans-serif;
-    font-size: 30px;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 1.8px;
+    font-size: 32px;
     color: var(--subject);
+}
+.navbar div .navheadH1 span{
+  font-size: 38px;
+  color: var(--subject2);
+  font-family: 'Great Vibes', cursive;
 }
 .navbar div h1::first-letter{
     text-transform: capitalize;
@@ -292,20 +298,26 @@ body{
   padding: 30px;
   color: var(--pText);
 }
-.blogpost > h1{
-  color: #3EC1D3;
+.blogpost h1{
+  padding: 5px 0 5px;
+  color: var(--subject2);
 }
-.blogpost > h2{
-  color: #3EC1D3;
-}.blogpost > h3{
-  color: #3EC1D3;
-}.blogpost > h4{
-  color: #3EC1D3;
-}.blogpost > h5{
-  color: #3EC1D3;
+.blogpost h2{
+  padding: 5px 0 5px;
+  color: var(--subject2);
+}.blogpost h3{
+  padding: 5px 0 5px;
+  color: var(--subject2);
+}.blogpost h4{
+  padding: 5px 0 5px;
+  color: var(--subject2);
+}.blogpost h5{
+  padding: 5px 0 5px;
+  color: var(--subject2);
 }
-.blogpost > h6{
-  color: #3EC1D3;
+.blogpost h6{
+  padding: 5px 0 5px;
+  color: var(--subject2);
 }
 .blogpost a{
   color: #00E0FF;
