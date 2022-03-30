@@ -21,7 +21,7 @@
   --cat: #000;
   --contactp: #fff;
   --catType: #fff;
-  --path: #A6FFF2;
+  --path: #74F9FF;
 
 }
 *{
@@ -320,7 +320,7 @@ body{
   color: #00E0FF;
 }
 .blogpost a{
-  color: #A6FFF2;
+  color: #74F9FF;
 text-decoration:underline;
 }
 .blogpost p, .blogpost li {
