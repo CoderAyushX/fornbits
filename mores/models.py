@@ -22,3 +22,6 @@ class whatsnew(models.Model):
     upload_time = models.DateTimeField(default= now)
     def __str__(self):
         return self.update[ :20]
+class Writeblog(models.Model):
+    content =  HTMLField()
+    upload_time = models.DateTimeField(default= now)

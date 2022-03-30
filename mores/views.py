@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.contrib import messages
-from .models import Rate,Feedback,whatsnew
+from .models import Rate,Feedback,whatsnew, Writeblog
 # Create your views here.
 def more(request):
     return render(request, 'more.html')
@@ -49,9 +49,14 @@ def feedback(request):
 
 def update(request):
     updates = whatsnew.objects.all().first()
-    print(updates)
     return render(request, 'updates.html', {'updates' : updates})
-
+def writeblog(request):
+    if request.method == "POST":
+        message = request.POST.get('content')
+        writeblog = Writeblog(content = message)
+        writeblog.save()
+    else:
+     return render(request, 'writeblog.html')
 def error_404(request, exception):
     return render(request, '404.html')
     

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Rate,Feedback,whatsnew
+from .models import Rate,Feedback,whatsnew, Writeblog
 # # Register your models here.
 
 class FeedbackAdmin(admin.ModelAdmin):
@@ -8,4 +8,5 @@ class FeedbackAdmin(admin.ModelAdmin):
 
 admin.site.register(Rate)
 admin.site.register(whatsnew)
+admin.site.register(Writeblog)
 admin.site.register(Feedback, FeedbackAdmin)
