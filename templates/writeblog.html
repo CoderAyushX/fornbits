@@ -57,8 +57,20 @@ button{
   <body>
   <h1>Write a blog for forbits</h1>
     <form method="post">
+        {% csrf_token %}
       <textarea id="mytextarea"  name="content">Hello, World!</textarea>
       <button type="submit">Submit</button>
     </form>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    {% for message in messages  %}
+    swal({
+      title: "Thank you!",
+      text: "{{message}}",
+      icon: "success",
+      button: "Done!",
+   });
+    {% endfor %}
+</script>
   </body>
 </html>
