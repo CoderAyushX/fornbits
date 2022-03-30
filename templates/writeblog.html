@@ -30,6 +30,14 @@
     margin: 69px auto  20px auto;
     text-align: center;
 }
+html,body{
+    height:100%;
+  }
+.wrapper {
+      min-height: 100%;
+      position: relative;
+    padding-bottom: 70px; /* footer's height */
+}
 body{
 background:#181818;
 }
@@ -61,12 +69,14 @@ button{
 
 
  {% block body %}
+ <div class="wrapper">
  <h1 class="writeblog">Write a blog for forbits</h1>
     <form method="post">
         {% csrf_token %}
       <textarea id="mytextarea"  name="content">Hello, World!</textarea>
       <button type="submit">Submit</button>
     </form>
+</div>
  {% endblock body %}
 {% block script %}
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
