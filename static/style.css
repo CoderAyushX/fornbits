@@ -300,27 +300,27 @@ body{
 }
 .blogpost h1{
   padding: 5px 0 5px;
-  color: var(--subject2);
+  color: #00E0FF;
 }
 .blogpost h2{
   padding: 5px 0 5px;
-  color: var(--subject2);
+  color: #00E0FF;
 }.blogpost h3{
   padding: 5px 0 5px;
-  color: var(--subject2);
+  color: #00E0FF;
 }.blogpost h4{
   padding: 5px 0 5px;
-  color: var(--subject2);
+  color: #00E0FF;
 }.blogpost h5{
   padding: 5px 0 5px;
-  color: var(--subject2);
+  color: #00E0FF;
 }
 .blogpost h6{
   padding: 5px 0 5px;
-  color: var(--subject2);
+  color: #00E0FF;
 }
 .blogpost a{
-  color: #00E0FF;
+  color: #A6FFF2;
 text-decoration:underline;
 }
 .blogpost p, .blogpost li {
