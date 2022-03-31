@@ -7,7 +7,7 @@ from .models import Category, Post, blogpostComment
 
 def blogs(request):
     cat = Category.objects.all()
-    post = Post.objects.all()
+    post = Post.objects.all().order_by("upload_time")[:20]
     context = {
         'cats': cat,
         'posts': post
