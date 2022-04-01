@@ -33,7 +33,7 @@ class Posts(models.Model):
         choices = CONTENT_TYPE,
         default = 'long'
         )
-    cat = models.ForeignKey(Category, on_delete=models.CASCADE)
+    cat = models.ForeignKey(Categorys, on_delete=models.CASCADE)
     image = models.URLField(max_length=350)
     upload_time = models.DateTimeField(default= now)
     authorName = models.CharField( max_length=150)
@@ -49,7 +49,7 @@ class blogpostComments(models.Model):
     IDno = models.AutoField(primary_key=True )
     comments = models.TextField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    post = models.ForeignKey(Posts, on_delete=models.CASCADE)
     parent = models.ForeignKey('self', on_delete=models.CASCADE, null= True)
     timestamp = models.DateTimeField(default= now)
     def __str__(self):
