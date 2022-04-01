@@ -16,7 +16,7 @@ def blogs(request):
 
 
 def blogpost(request, url):
-    # try:
+    try:
         post = Posts.objects.get(url=url)
         relatedPost = Posts.objects.all().exclude(post_id=post.post_id)[:5]
         # work to do here
@@ -39,8 +39,8 @@ def blogpost(request, url):
             'tags': finalTags
         }
         return render(request, 'blogpost.html', context)
-    # except:
-    #     return render(request, '500.html')
+    except:
+        return render(request, '500.html')
 
 
 def category(request, url):
