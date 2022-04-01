@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category,Post,blogpostComment
+from .models import Categorys,Posts,blogpostComments
 # Register your models here.
 #admin customizing
 class CategoryAdmin(admin.ModelAdmin):
@@ -18,6 +18,6 @@ class CommentAdmin(admin.ModelAdmin):
     list_filter = ('post',)
     list_per_page = 50
 
-admin.site.register(Category, CategoryAdmin)
-admin.site.register(Post, PostAdmin)
-admin.site.register(blogpostComment, CommentAdmin)
+admin.site.register(Categorys, CategoryAdmin)
+admin.site.register(Posts, PostAdmin)
+admin.site.register(blogpostComments, CommentAdmin)

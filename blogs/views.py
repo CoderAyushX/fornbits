@@ -1,13 +1,13 @@
 from django.shortcuts import render, redirect
 from django.test import tag
-from .models import Category, Post, blogpostComment
+from .models import Categorys, Posts, blogpostComments
 
 # Create your views here.
 
 
 def blogs(request):
-    cat = Category.objects.all()
-    post = Post.objects.all().order_by("-upload_time")[:20]
+    cat = Categorys.objects.all()
+    post = Posts.objects.all().order_by("-upload_time")[:20]
     context = {
         'cats': cat,
         'posts': post
@@ -17,10 +17,10 @@ def blogs(request):
 
 def blogpost(request, url):
     # try:
-        post = Post.objects.get(url=url)
-        relatedPost = Post.objects.all().exclude(post_id=post.post_id)[:5]
+        post = Posts.objects.get(url=url)
+        relatedPost = Posts.objects.all().exclude(post_id=post.post_id)[:5]
         # work to do here
-        comments = blogpostComment.objects.filter(post=post)
+        comments = blogpostComments.objects.filter(post=post)
         def spaceRemove(text):
             TEXT = text.replace(" ", "")
             return TEXT
@@ -44,9 +44,9 @@ def blogpost(request, url):
 
 
 def category(request, url):
-    searchCat = Category.objects.get(url=url)
-    post = Post.objects.filter(cat=searchCat)
-    cat = Category.objects.all()
+    searchCat = Categorys.objects.get(url=url)
+    post = Posts.objects.filter(cat=searchCat)
+    cat = Categorys.objects.all()
     context = {
         'cats': cat,
         'posts': post
@@ -61,7 +61,7 @@ def comment(request):
         comment = request.POST.get('comment')
         user = request.user
         postno = request.POST.get('Sno')
-        post = Post.objects.get(post_id=postno)
-        comment = blogpostComment(comments=comment, user=user, post=post)
+        post = Posts.objects.get(post_id=postno)
+        comment = blogpostComments(comments=comment, user=user, post=post)
         comment.save()
     return redirect(f'/blogs/{post.url}')

@@ -9,7 +9,7 @@ CONTENT_TYPE = (
 
 )
 #category modle
-class Category(models.Model):
+class Categorys(models.Model):
     cat_id = models.AutoField(primary_key=True)
     title = models.CharField( max_length=150)
     description = models.TextField()
@@ -22,7 +22,7 @@ class Category(models.Model):
 
 #post modle
 
-class Post(models.Model):
+class Posts(models.Model):
     post_id = models.AutoField(primary_key=True)
     title = models.CharField( max_length=150)
     description = models.TextField()
@@ -36,7 +36,7 @@ class Post(models.Model):
     cat = models.ForeignKey(Category, on_delete=models.CASCADE)
     image = models.URLField(max_length=350)
     upload_time = models.DateTimeField(default= now)
-    authorNmae = models.CharField( max_length=150)
+    authorName = models.CharField( max_length=150)
     authorDescs = models.TextField()
     authorImage = models.CharField( max_length=250)
     tags = models.TextField()
@@ -45,7 +45,7 @@ class Post(models.Model):
 
 #blog comment
 
-class blogpostComment(models.Model):
+class blogpostComments(models.Model):
     IDno = models.AutoField(primary_key=True )
     comments = models.TextField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
