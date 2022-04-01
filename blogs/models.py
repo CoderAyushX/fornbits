@@ -36,6 +36,9 @@ class Post(models.Model):
     cat = models.ForeignKey(Category, on_delete=models.CASCADE)
     image = models.URLField(max_length=350)
     upload_time = models.DateTimeField(default= now)
+    author = models.CharField( max_length=150)
+    authorDesc = models.TextField()
+    authorImg = models.CharField( max_length=250)
     tags = models.TextField()
     def __str__(self):
         return self.title

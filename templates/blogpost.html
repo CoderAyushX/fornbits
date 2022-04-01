@@ -107,7 +107,25 @@
 <div class="postArea">
   <div class="postPath">
     <p>Home > Blogs > {{posts.title}}</p>
+    <div class="PostAuthor">
+   <div class="postPathImg">
+     <img src="{{posts.authorImg}}" alt="author" >
+   </div>
+   <div style="margin-left: 50px;">
+     <p style="font-size: 28px; font-weight: 700;" >Post by</p>
+     <p style="font-size: 24px; color: #fff;">{{posts.author}}</p>
+     <p style="margin-top: 12px;">posted at</p>
+     <p style="font-size: 14px; color: #fff;">{{posts.upload_time}}</p>
+   </div>
+
+</div>
+<div style="margin-left: 30px; margin-top: 20px;">
+  <p style="font-size: 24px; color: #fff;"> about Author </p>
+  <p>{{posts.authorDesc}}</p>
+</div>
   </div>
+
+
 <div class="blogpost" id="blogpost">
 
   {{posts.content | safe}}
